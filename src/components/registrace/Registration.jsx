@@ -26,9 +26,9 @@ const Registration = () => {
       ...user,
       email: event.target.value,
     });
-    console.log(email.value);
-    console.log(user.email);
-    console.log(username.value);
+    //console.log(email.value);
+    //console.log(user.email);
+    //console.log(username.value);
     //changeUsername();
     if (username.value === '') {
       if (email.value.indexOf('@') !== -1) {
@@ -55,12 +55,17 @@ const Registration = () => {
     }
   };
 
-  console.log(user);
+  // console.log(user);
 
   return (
     <>
       <h1>REGISTRATION</h1>
-      <form onSubmit={handleSubmit}>
+      <div className="round big-size">
+        <div className="round medium-size">
+          <img className="round small-size" />
+        </div>
+      </div>
+      <form onSubmit={handleSubmit} id="formik">
         <input
           type="email"
           id="email"
